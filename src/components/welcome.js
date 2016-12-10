@@ -1,4 +1,5 @@
 const React = require('react');
+const NavBar = require('./navigation')
 
 
 // testing connection to server
@@ -14,6 +15,7 @@ const Welcome = React.createClass({
   render() {
     return (
       <div>
+        <NavBar />
         <h1>Welcome, to the real world</h1>
       </div>
     )
