@@ -1,6 +1,7 @@
 "use strict"
 
 const React = require('react');
+import { Link } from 'react-router'
 
 const NavBar = React.createClass({
 
@@ -8,11 +9,11 @@ const NavBar = React.createClass({
     return (
       <nav className="navbar navbar-default">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">Farook Khan ¬ Full-Stack Development</a>
+          <Link to="/" className="navbar-brand" >Farook Khan ¬ Full-Stack Development</Link>
           <ul className="nav navbar-nav navbar-right">
-            <li><a href="#">About</a></li>
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">LinkedIn</a></li>
+            <li><Link to ="/about" activeStyle={{ color : 'dark-grey' }}>About</Link></li>
+            <li><a href="https://github.com/farookkhan">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/farook-khan-developer">LinkedIn</a></li>
             <li><a href="#">Email</a></li>
           </ul>
         </div>
