@@ -1,0 +1,15 @@
+#btn-submit {
+  background: rgb(17,17,17);
+  border-radius: 0px;
+  border-color: rgb(61,61,61);
+  font-family: sans-serif;
+  color: rgb(103,103,103);
+
+  -webkit-transition: all 200ms cubic-bezier(.165,.84,.44,1);
+
+  transition: all 200ms cubic-bezier(.165,.84,.44,1);
+}
+
+#btn-submit:hover {
+  background: white;
+}

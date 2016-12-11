@@ -17,6 +17,12 @@ exports.title = {
   marginLeft: '8%'
 }
 
+exports.titleF = {
+  marginTop: '10%',
+  marginLeft: '8%',
+  color: 'white'
+}
+
 exports.description = {
   marginTop: '3%',
   marginLeft: '8%',
@@ -43,4 +49,19 @@ exports.github = {
 exports.linkedIn = {
   color: 'black',
   paddingLeft: '10%'
+}
+
+exports.backBtn = {
+  color: 'black',
+  position: 'absolute',
+  top: '20px',
+  left:'20px'
+}
+
+exports.inputStyle = {
+  borderRadius: '0px',
+  backgroundColor: 'rgb(17,17,17)',
+  borderColor: 'rgb(61,61,61)',
+  color: 'rgb(134,134,123)',
+  fontSize: '12px'
 }
