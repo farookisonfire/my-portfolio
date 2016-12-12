@@ -2,7 +2,7 @@
 
 const React = require('react')
 
-const { inputStyle } = require('./styles')
+const { inputStyle, errorStyle } = require('./styles')
 
 const Input = React.createClass({
   propTypes: {
@@ -32,7 +32,7 @@ const Input = React.createClass({
             style={inputStyle}
             value={this.props.value}
             onChange={this.props.onChange} />
-          <div className="input">{this.props.error}</div>
+          <div className="input" style={errorStyle}>{this.props.error}</div>
         </div>
       </div>
     );

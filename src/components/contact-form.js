@@ -2,7 +2,7 @@
 
 const React = require('react');
 
-const { aGround, overlay, titleF, description, paragraph, footer, inputStyle } = require('./styles')
+const { aGround, overlay, titleF, description, paragraph, footer, inputStyle , errorStyle} = require('./styles')
 const Input = require('./text-input')
 
 const ContactForm = React.createClass({
@@ -20,14 +20,16 @@ const ContactForm = React.createClass({
               name="name"
               placeholder="Name"
               onChange={this.props.onChange}
-              value={this.props.submission.name} />
+              value={this.props.submission.name}
+              error={this.props.errors.name}/>
 
               <Input
                 label="Email"
                 name="email"
                 placeholder="Email"
                 onChange={this.props.onChange}
-                value={this.props.submission.email} />
+                value={this.props.submission.email}
+                error={this.props.errors.email}/>
 
             <label htmlFor="message">Your Message</label>
             <textarea type="text"
@@ -39,12 +41,14 @@ const ContactForm = React.createClass({
               value= {this.props.submission.message}
               onChange={this.props.onChange} >
             </textarea>
+            <div style={errorStyle}>{this.props.errors.message}</div>
             <br />
 
             </div>
             <div style={footer}>
               <input type="submit" value="SEND MESSAGE" className="btn btn-default"
-              id="btn-submit" />
+              id="btn-submit"
+              onClick={this.props.onSend}/>
             </div>
         </form>
       </div>

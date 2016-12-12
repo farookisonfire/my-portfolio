@@ -65,3 +65,9 @@ exports.inputStyle = {
   color: 'rgb(134,134,123)',
   fontSize: '12px'
 }
+
+exports.errorStyle ={
+  fontStyle: 'italic',
+  color: 'indianred',
+  fontSize: '10px'
+}

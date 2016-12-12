@@ -42,6 +42,8 @@ const About = React.createClass({
           <ContactForm
             submission={this.props.submission}
             onChange={this.props.onChange}
+            onSend={this.props.onSend}
+            errors={this.props.errors}
           />
         </div>
       </div>
