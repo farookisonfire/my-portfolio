@@ -39,24 +39,23 @@ exports.overlay = {
   left:0,
   backgroundColor: 'rgb(17,17,17)',
   height: '100vh',
-  marginLeft: '50%',
   width: '100%'
 }
 exports.title = {
-  marginTop: '10%',
-  marginLeft: '8%'
+  marginTop: '20%',
+  marginLeft: '15%'
 }
 
 exports.titleF = {
-  marginTop: '10%',
-  marginLeft: '8%',
+  marginTop: '20%',
+  marginLeft: '15%',
   color: 'white'
 }
 
 exports.description = {
-  marginTop: '3%',
-  marginLeft: '8%',
-  width: '28%',
+  marginTop: '6%',
+  marginLeft: '15%',
+  width: '55%',
   textAlign: 'justify'
 }
 
@@ -65,9 +64,10 @@ exports.paragraph = {
 }
 
 exports.footer = {
-  marginTop: '3%',
-  marginLeft: '8%',
-  width: '28%',
+  marginTop: '6%',
+  marginLeft: '15%',
+  width: '55%',
+  marginBottom: '5%',
   textAlign: 'center'
 }
 
