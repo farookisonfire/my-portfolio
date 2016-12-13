@@ -1,3 +1,25 @@
+//navigation.js
+
+exports.navbarTitle = {
+  fontSize:'14px'
+}
+
+//welcome.js
+exports.titleWelcome = {
+  color: 'rgb(111,100,100)',
+  fontWeight: '200',
+  marginTop: '5%',
+  marginBottom: '5%'
+}
+
+//welcome component
+exports.imgStyle = {
+  marginLeft: 'auto',
+  marginRight: 'auto'
+}
+
+
+// about.js
 exports.aGround = {
   position: 'relative',
   height: '100vh'

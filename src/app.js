@@ -1,12 +1,15 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
-import { Router, Route, hashHistory } from 'react-router'
+import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 const history = createBrowserHistory()
 
 const NavBar = require('./components/navigation');
 const About = require('./components/about');
+const Welcome = require('./components/welcome');
+const POneLanding = require('./components/project-pages/p1-landing');
+const PTwoLanding = require('./components/project-pages/p2-landing');
 
 // testing connection to server
 fetch('/api/data')
@@ -22,9 +25,6 @@ const App = React.createClass({
     return (
       <div>
         <NavBar />
-        <div className="container-fluid">
-          <h2>Welcome, to the real world</h2>
-        </div>
         {this.props.children}
       </div>
     )
@@ -34,8 +34,11 @@ const App = React.createClass({
 ReactDOM.render((
   <Router history={hashHistory}>
     <Route path="/" component={App}>
-
+      <IndexRoute component={Welcome} />
+      <Route path="/project-one-landing" component={POneLanding} />
+      <Route path="/project-two-landing" component={PTwoLanding} />
     </Route>
     <Route path="/about" component={About} />
+    <Route path="/contact" component={About} />
   </Router>
 ), document.getElementById('app'))
