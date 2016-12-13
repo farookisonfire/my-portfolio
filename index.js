@@ -5,6 +5,8 @@ const NODE_ENV = process.env.NODE_ENV || 'development'
 const app = express();
 const data = ['nagata', 'kamuzora'];
 
+app.use(express.static('dist'))
+
 app.get('/api/data', (req,res) => {
   res.send(data)
 });
