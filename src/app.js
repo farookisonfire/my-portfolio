@@ -10,6 +10,7 @@ const About = require('./components/about');
 const Welcome = require('./components/welcome');
 const POneLanding = require('./components/project-pages/p1-landing');
 const PTwoLanding = require('./components/project-pages/p2-landing');
+const Footer = require('./components/footer');
 
 // testing connection to server
 fetch('/api/data')
@@ -25,14 +26,17 @@ const App = React.createClass({
     return (
       <div>
         <NavBar />
-        {this.props.children}
+        <div>
+          {this.props.children}
+        </div>
+        <Footer />
       </div>
     )
   }
 });
 
 ReactDOM.render((
-  <Router history={hashHistory}>
+  <Router history={hashHistory} onUpdate={() => window.scrollTo(0, 0)}>
     <Route path="/" component={App}>
       <IndexRoute component={Welcome} />
       <Route path="/project-one-landing" component={POneLanding} />
