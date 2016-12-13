@@ -12,14 +12,6 @@ const POneLanding = require('./components/project-pages/p1-landing');
 const PTwoLanding = require('./components/project-pages/p2-landing');
 const Footer = require('./components/footer');
 
-// testing connection to server
-fetch('/api/data')
-  .then(res => {
-    return res.json()
-  }).then(res => {
-    console.log(res)
-  })
-
 // first component
 const App = React.createClass({
   render() {
