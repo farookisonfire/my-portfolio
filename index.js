@@ -1,6 +1,7 @@
 const express = require('express');
 
-const PORT = 1337;
+const PORT = process.env.port || 1337;
+const NODE_ENV = process.env.NODE_ENV || 'development'
 const app = express();
 const data = ['nagata', 'kamuzora'];
 
