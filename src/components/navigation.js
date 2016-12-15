@@ -1,28 +1,41 @@
 "use strict"
 
 const React = require('react');
-const { Link } = require('react-router')
-const { navbarTitle, navbarStyle } = require('./styles')
+const { Link } = require('react-router');
+const { navbarTitle, navbarStyle } = require('./styles');
+const { Navbar, Nav, NavItem } = require('react-bootstrap');
+const { LinkContainer } = require('react-router-bootstrap');
 
-const NavBar = React.createClass({
+
+const MyNavBar = React.createClass({
 
   render() {
     return (
-      <div>
-        <nav className="navbar navbar-default" style={navbarStyle}>
-          <div className="container">
-            <Link to="/" className="navbar-brand navbar-title" style={navbarTitle}>Farook Khan ¬ Full-Stack Development</Link>
-            <ul className="nav navbar-nav navbar-right navbar-links">
-              <li><Link to ="/about" activeStyle={{ color : 'dark-grey' }}>About</Link></li>
-              <li><a href="https://github.com/farookkhan">GitHub</a></li>
-              <li><a href="https://www.linkedin.com/in/farook-khan-developer">LinkedIn</a></li>
-              <li><Link to="/contact">Contact</Link></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+
+      <Navbar collapseOnSelect style={navbarStyle}>
+        <Navbar.Header>
+          <Navbar.Brand>
+            <a href="/" style={navbarTitle}>Farook Khan ¬ Full-Stack Development</a>
+          </Navbar.Brand>
+          <Navbar.Toggle />
+        </Navbar.Header>
+        <Navbar.Collapse>
+          <Nav pullRight>
+            <LinkContainer to="/about">
+              <NavItem eventKey={1}>About</NavItem>
+            </LinkContainer>
+              <NavItem eventKey={2} href="https://github.com/farookkhan">Github</NavItem>
+            <LinkContainer to="https://www.linkedin.com/in/farook-khan-developer">
+              <NavItem eventKey={3}>LinkedIn</NavItem>
+            </LinkContainer>
+            <LinkContainer to="/contact">
+              <NavItem eventKey={4}>Contact</NavItem>
+            </LinkContainer>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     )
   }
 })
 
-module.exports = NavBar;
+module.exports = MyNavBar;
