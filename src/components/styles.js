@@ -16,7 +16,7 @@ exports.navbarStyle = {
 exports.titleWelcome = {
   color: 'rgb(111,100,100)',
   fontWeight: '200',
-  marginTop: '10%',
+  marginTop: '110px',
   marginBottom: '3%'
 }
 
