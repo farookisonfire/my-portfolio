@@ -22,6 +22,7 @@ const AboutPage = React.createClass({
     var value = event.target.value;
     this.state.submission[field] = value;
     return this.setState({submission: this.state.submission})
+
   },
 
   submissionIsValid() {
